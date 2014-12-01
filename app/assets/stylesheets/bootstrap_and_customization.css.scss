@@ -9,5 +9,17 @@ pre {
     background: black;
     color: white;
     border: none;
-    font-size: 3vw;
+    font-size: 2vw;
+
+    a {
+	color: white;
+	
+	&:hover, 
+	&:visited,
+	&:active,
+	&:link {
+	    color: white;
+	    text-decoration: none;
+	}
+    }
 }
