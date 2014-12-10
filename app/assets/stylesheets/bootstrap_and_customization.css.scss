@@ -15,6 +15,19 @@ html, body {
     color: white;
 }
 
+video#vid-ct {
+    position: fixed;
+//    right: 0;
+//    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+//    width: auto;
+//    height: auto;
+    z-index: 0;
+    background: black;//image-url('plane-window-50.png') no-repeat;
+    background-size: contain;
+}
+
 pre {
     background: black;
     color: transparent;
@@ -38,7 +51,9 @@ pre {
 }
 
 .ascii {
-    border-radius: 40%;
+//    border-radius: 40%;
+    opacity: 0.5;
+    margin: 0;
 }
 
 #window {
