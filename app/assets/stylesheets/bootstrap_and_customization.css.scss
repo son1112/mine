@@ -21,7 +21,7 @@ video#vid-ct {
 //    bottom: 0;
 //    min-width: 100%;
 //    min-height: 100%;
-    width: 80%;
+    width: 100%;
     height: auto;
     z-index: 0;
     background: black;//image-url('plane-window-50.png') no-repeat;
@@ -58,9 +58,10 @@ pre {
 
 #window {
     position: absolute;
-    top: 50%;
+    top: 25%;
     left: 25%;
     opacity: 0.6;
     color: red;
     font-family: '1942_report';
+    box-shadow: 1px 1px 100px 10px orange;
 }
