@@ -1,3 +1,13 @@
+@font-face {
+    font-family: '1942_report';
+    src: url(/fonts/1942-webfont.woff) format('woff');
+    src: url(/fonts/1942-webfont.eot?#iefix) format('embedded-opentype'),
+         url(/fonts/1942-webfont.woff2) format('woff2'),
+	 url(/fonts/1942-webfont.ttf) format('truetype'),
+	 url(/fonts/1942-webfont.eot),
+         url(/fonts/1942-webfont.svg#1942_report1942_report) format('svg');
+}
+
 @import 'bootstrap';
 
 html, body {
@@ -7,19 +17,35 @@ html, body {
 
 pre {
     background: black;
-    color: white;
+    color: transparent;
     border: none;
     font-size: 2vw;
+    font-family: '1942_report';
+    text-shadow: 3px 3px 3px orange;
 
     a {
-	color: white;
+	color: transparent;
 	
 	&:hover, 
 	&:visited,
 	&:active,
 	&:link {
-	    color: white;
+	    color: transparent;
 	    text-decoration: none;
 	}
     }
+    overflow: hidden;
+}
+
+.ascii {
+    border-radius: 40%;
+}
+
+#window {
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    opacity: 0.6;
+    color: red;
+    font-family: '1942_report';
 }

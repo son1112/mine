@@ -1,14 +1,52 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Mine</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+  <head>
+    <title>Mine</title>
+    <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    <%= csrf_meta_tags %>
+    <script src="terminal.js"></script>
+  </head>
+  <body>
 
-<%= yield %>
+    <div class='container-fluid'>
+      <div class='col-md-12'>
+	<%= yield %>
+      </div>
+    </div>
 
-</body>
+    <div id='term'></div>
+
+    <script>
+
+
+     $(document).ready(function() {
+
+       $('#nose').click(function() {
+
+	 var t1 = new Terminal();
+	 var x = document.getElementById("window");
+	 console.log(t1);
+	 t1.setHeight('200px');
+	 t1.setWidth('600px');
+	 // document.body.appendChild(t1.html);
+	 x.appendChild(t1.html);
+
+	 t1.print('...');
+	 t1.input('', function (input) {
+	   t1.print(input);
+	   
+	   t2.sleep(1000, function () {
+	     t2.print('bye');
+	   });
+	 });
+
+	 
+       });
+
+     });
+
+    </script>
+
+  </body>
 </html>
