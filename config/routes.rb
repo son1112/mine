@@ -3,6 +3,9 @@ Mine::Application.routes.draw do
   root "static_pages#home"
 
   get 'static_pages/home'
+  get 'static_pages/path_test'
+  get 'static_pages/3dtest'
+  get 'static_pages/rerender'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

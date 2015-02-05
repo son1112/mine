@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.1.3'
+ruby '2.2.0'
 
 gem 'rails', '4.1.0'
 gem 'sass-rails', '4.0.3'
@@ -18,6 +18,8 @@ gem 'simple_form'
 gem 'skrollr-rails'
 gem 'autoprefixer-rails'
 gem 'metamagic'
+#gem 'threejs-rails', git: 'git://github.com/marvindanig/threejs-rails.git'
+gem 'threejs-rails'
 
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 gem 'spring',        group: :development

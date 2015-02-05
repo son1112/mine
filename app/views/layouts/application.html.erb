@@ -5,7 +5,8 @@
     <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
     <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
     <%= csrf_meta_tags %>
-    <script src="terminal.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="/assets/terminal.js"></script>
   </head>
   <body>
 
@@ -19,32 +20,60 @@
 
     <script>
 
-
      $(document).ready(function() {
 
-       $('#nose').click(function() {
+       $("#window").append("<div>test</div>");
+       console.log($("window").html());
+
+       //$('#nose').click(function() {
+       $('.ascii').click(function() {
 
 	 var t1 = new Terminal();
 	 var x = document.getElementById("window");
-	 console.log(t1);
-	 t1.setHeight('200px');
-	 t1.setWidth('600px');
+	 //x.appendChild("tmp");
+	 //console.log(t1);
+	 t1.setHeight('500px');
+	 t1.setWidth('250px');
+
 	 // document.body.appendChild(t1.html);
-	 x.appendChild(t1.html);
+	 //x.appendChild(t1.html);
+	 y = $("#window").children[0];
+	 console.log(y);
+//	 x.replaceWith(y,t1.html);
+	 y.replaceWith(t1.html);
 
 	 t1.print('...');
 	 t1.input('', function (input) {
-	   t1.print(input);
-	   
-	   t2.sleep(1000, function () {
-	     t2.print('bye');
-	   });
+	   switch (input) {
+	       case "w":
+	       t1.setWidth('500px');
+	       break;
+	       case "h":
+	       t1.setHeight('100px');
+	       break;
+	       default: alert("command not found");
+	   }
 	 });
-
+//	 }
 	 
        });
 
      });
+
+
+     //three.js//
+
+/*     var object;
+     var loader = new THREE.JSONLoader();
+
+     loader.load( "assets/gallery.json", function(geometry, materials) {
+       var material = new THREE.MeshFaceMaterial(materials);
+       object = new THREE.Mesh(geometry, materials);
+       
+       object.scale.set(1, 1, 1);
+       scene.add(object)
+       render();
+     });*/
 
     </script>
 

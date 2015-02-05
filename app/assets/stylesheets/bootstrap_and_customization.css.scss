@@ -12,7 +12,9 @@
 
 html, body {
     background: black;
+//    background: white;
     color: white;
+    margin: 0;
 }
 
 video#vid-ct {
@@ -57,11 +59,26 @@ pre {
 }
 
 #window {
+//    background: transparent;
     position: absolute;
-    top: 25%;
-    left: 25%;
+    top: 5%;
+    left: 20%;
     opacity: 0.6;
     color: red;
     font-family: '1942_report';
-    box-shadow: 1px 1px 100px 10px orange;
+    box-shadow: 1px 1px 100px 10px black;
+    border-radius: 10%;
+    margin: 0 auto 0 25%;
+}
+
+.Terminal {
+//    background: red;
+    border-radius: 10%;
+    padding: 2%;
+    text-align: center;
+}
+
+canvas {
+    width: 100%;
+    height: 100%;
 }
